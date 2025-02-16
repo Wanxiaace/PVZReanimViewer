@@ -315,11 +315,15 @@ void ViewerApp::LoadReanim(const char* reanimPath, const char* resDirPath)
 	for (auto& x : *mReanimPtr->mImagesSet)
 	{
 		mImageShowList[ctr] = true;
-		std::cout << x.substr(13) << std::endl;
-		if (sgf::FileManager::IsRealFileExist(sgf::String(resDirPath) + "/" + x + ".png")) {
+		
+		if (x.length() < 14 ||sgf::FileManager::IsRealFileExist(sgf::String(resDirPath) + "/" + x + ".png")) {
 			mReanimPtr->mResourceManager->LoadImageWithID(sgf::String(resDirPath) + "/" + x + ".png", x);
-		}else
+		}
+		else {
+			std::cout << x.substr(13) << std::endl;
 			mReanimPtr->mResourceManager->LoadImageWithID(sgf::String(resDirPath) + "/" + x.substr(13) + ".png", x);
+		}
+			
 		ctr++;
 	}
 
