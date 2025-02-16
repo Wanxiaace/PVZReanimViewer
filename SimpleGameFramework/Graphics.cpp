@@ -1,7 +1,6 @@
 #include "Graphics.h"
 #include <string>
-#include "../PVZCapture/Constant.h"
-//#include "../PVZCapture/Constant.h"
+
 
 void sgf::Graphics::ResizeCube(float targetX, float targetY, float targetWidth, float targetHeight)
 {
