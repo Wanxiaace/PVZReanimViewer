@@ -1,6 +1,7 @@
 #include "ReanimViewer.h"
 #include "Constant.h"
 #include "IconFonts.h"
+#include "GamePacker/GamePacker.h"
 #include <nfd.h>
 
 ViewerApp::ViewerApp()
@@ -315,8 +316,10 @@ void ViewerApp::LoadReanim(const char* reanimPath, const char* resDirPath)
 	{
 		mImageShowList[ctr] = true;
 		std::cout << x.substr(13) << std::endl;
-
-		mReanimPtr->mResourceManager->LoadImageWithID(sgf::String(resDirPath) + "\\" + x.substr(13) + ".png", x);
+		if (sgf::FileManager::IsRealFileExist(sgf::String(resDirPath) + "/" + x + ".png")) {
+			mReanimPtr->mResourceManager->LoadImageWithID(sgf::String(resDirPath) + "/" + x + ".png", x);
+		}else
+			mReanimPtr->mResourceManager->LoadImageWithID(sgf::String(resDirPath) + "/" + x.substr(13) + ".png", x);
 		ctr++;
 	}
 
