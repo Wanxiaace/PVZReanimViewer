@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+/.vs/PVZCapture
+/Debug
+/Libs
+/PVZCapture/Debug
+/SimpleGameFramework/.vs/SimpleGameFramework
+/SimpleGameFramework/Debug
+/SimpleGameFramework/docx
+/SimpleGameFramework/Release
+/vcpkg_installed/x86-windows
