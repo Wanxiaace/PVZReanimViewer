@@ -1,0 +1,32 @@
+{
+  "name": "simple-game-framework",
+  "version-string": "0.0.1",
+  "dependencies": [
+    "glew",
+    "glm",
+    "sdl2",
+    {
+      "name": "sdl2-image",
+      "features": [ "libjpeg-turbo" ]
+    },
+    {
+      "name": "sdl2-mixer",
+      "features": [
+        "mpg123",
+        "wavpack"
+      ]
+    },
+    "sdl2-ttf",
+    {
+      "name": "imgui",
+      "features": [
+        "opengl3-binding",
+        "sdl2-binding",
+        "docking-experimental"
+      ]
+    },
+    "pugixml",
+    "nlohmann-json",
+    "nativefiledialog-extended"
+  ]
+}

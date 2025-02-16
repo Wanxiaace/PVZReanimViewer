@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="PopCom">
+      <UniqueIdentifier>{f35d8842-1923-4d30-b3d6-ca15e546a269}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PopCom\include">
+      <UniqueIdentifier>{b60dae58-a902-4a87-9f75-d8fff61d40de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PopCom\src">
+      <UniqueIdentifier>{32fa51ce-0b8f-431b-9e42-ac704a7a0f82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SimpleGameFramework">
+      <UniqueIdentifier>{98013055-5fb8-4fb0-a5aa-c4c427b100a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SimpleGameFramework\src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="SimpleGameFramework\include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="GamePacker">
+      <UniqueIdentifier>{30877a26-2642-41dc-b36a-7808a9089c75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GamePacker\include">
+      <UniqueIdentifier>{6b242851-fcec-4aed-a429-b8abf787b8bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GamePacker\src">
+      <UniqueIdentifier>{6ef7c44b-bae8-4c64-b533-f091082f39e1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SimpleApp.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleImage.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Program.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetSystem.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="GameApp.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMessage.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Reanimation.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Animator.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Dictionary.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicSystem.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="CursorObject.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerInfo.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="LogoScreen.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="PopCom\CompiledReader.cpp">
+      <Filter>PopCom\src</Filter>
+    </ClCompile>
+    <ClCompile Include="FileStream.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePacker\GamePacker.cpp">
+      <Filter>GamePacker\src</Filter>
+    </ClCompile>
+    <ClCompile Include="SString.cpp">
+      <Filter>SimpleGameFramework\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SimpleApp.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleImage.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Program.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMessage.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="WidgetSystem.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="GameApp.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Reanimation.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Animator.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Dictionary.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicSystem.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="CursorObject.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerInfo.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="LogoScreen.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectHolder.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TickCounter.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="PopCom\CompiledReader.h">
+      <Filter>PopCom\include</Filter>
+    </ClInclude>
+    <ClInclude Include="FileStream.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePacker\GamePacker.h">
+      <Filter>GamePacker\include</Filter>
+    </ClInclude>
+    <ClInclude Include="SString.h">
+      <Filter>SimpleGameFramework\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
