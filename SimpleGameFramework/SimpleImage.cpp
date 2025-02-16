@@ -57,14 +57,15 @@ void sgf::SimpleImage::ReleaseTexture()
 SDL_Surface* sgf::SimpleImage::LoadFromFile(const char* path)
 {
 	FileStream* surfaceFile = FileManager::TryToLoadFilePointer(path);
-	SDL_Surface* bufferSuface = 
-		IMG_Load_RW(surfaceFile->mIStream,0);
 
-	if (!bufferSuface) {
+	if (!surfaceFile) {
 		gGameApp->Log() << "Failed to load Image At: " << path << std::endl;
 		SHOW_ERROR_ABORT_EXIT(("Failed to load Image At: " + sgf::String(path)).c_str());
 		return nullptr;
 	}
+
+	SDL_Surface* bufferSuface = 
+		IMG_Load_RW(surfaceFile->mIStream,0);
 
 	delete surfaceFile;
 
