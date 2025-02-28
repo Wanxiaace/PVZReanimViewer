@@ -12,7 +12,7 @@ namespace sgf {
 	extern std::mutex gLoopMutex;
 	extern std::thread* gUpdateThread;
 
-	class GameAppBase {
+	class GameAppBase {//历史遗留，不应该继承它
 	public:
 		std::function<void(GameAppBase*, int)> mDisplay;
 		std::function<void(GameAppBase*, SDL_Event&)> mCallback;

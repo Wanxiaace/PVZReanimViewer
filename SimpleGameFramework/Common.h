@@ -223,6 +223,7 @@ namespace sgf {
         static HCURSOR hArrowCur = LoadCursor(NULL, IDC_ARROW);
         static HCURSOR hWaitCur = LoadCursor(NULL, IDC_WAIT);
         static HCURSOR hHandCur = LoadCursor(NULL, IDC_HAND);
+#endif
 
         static SDL_Cursor* hSDLArrowCur = SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_ARROW);
         static SDL_Cursor* hSDLWaitCur = SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_WAIT);
@@ -249,8 +250,13 @@ namespace sgf {
         default:
             break;
         }
-#endif
     }
-
 }
+
+#define SGF_VERSION "0.1"
+
+static bool CheckVersion(const sgf::String version) {
+    return (version == SGF_VERSION);
+}
+
 #endif

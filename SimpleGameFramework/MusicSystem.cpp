@@ -88,7 +88,7 @@ void sgf::MusicManager::LoadChunkFormFile(const char* path,const String& key)
 	else {
 		gGameApp->Log() << "Failed to load Chunk At: " << path << std::endl;
 		gGameApp->Log() << Mix_GetError() << std::endl;
-		SHOW_ERROR_ABORT_EXIT((sgf::String("Failed to load Chunk At: ") + path).c_str());
+		SHOW_ERROR_ABORT_EXIT((_SS("Failed to load Chunk At: ") + path).c_str());
 		//std::cout << "Failed to load Chunk At: " << path << std::endl;
 	}
 
@@ -106,7 +106,7 @@ void sgf::MusicManager::LoadMusicFormFile(const char* path, const String& key)
 	else {
 		gGameApp->Log() << "Failed to load Music At: " << path << std::endl;
 		gGameApp->Log() << Mix_GetError() << std::endl;
-		SHOW_ERROR_ABORT_EXIT((sgf::String("Failed to load Music At: ") + path).c_str());
+		SHOW_ERROR_ABORT_EXIT((_SS("Failed to load Music At: ") + path).c_str());
 	}
 
 	//delete chunkFile;

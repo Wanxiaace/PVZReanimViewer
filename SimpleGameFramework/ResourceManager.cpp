@@ -80,52 +80,6 @@ void sgf::ResourceManager::LoadReanimWithID(const sgf::String& path, sgf::String
 	//mResourcePool[id] = reanim;
 }
 
-void sgf::ResourceManager::LoadReanimByDefinitionWithID(const PopCom::ReanimDefinition& def, sgf::String id)
-{
-	Reanimation* reanim = new Reanimation();
-	reanim->mFPS = def.mFPS;
-
-	for (int i = 0; i < def.mTrackCount;i++) {
-		TrackInfo aInfo = TrackInfo{ "" };
-		int aCounter = 0;
-
-		aInfo.mTrackName = def.mTracks[i].mName;
-
-		for (int j = 0; j < def.mTracks[i].mTransformCount; j++) {
-			TrackFrameTransform aFInfo;
-			PopCom::ReanimTransform& trans = def.mTracks[i].mTransforms[j];
-			aFInfo.x = trans.mTransX;
-			aFInfo.y = trans.mTransY;
-			aFInfo.kx = trans.mSkewX;
-			aFInfo.ky = trans.mSkewY;
-			aFInfo.sx = trans.mScaleX;
-			aFInfo.sy = trans.mScaleY;
-			aFInfo.a = trans.mAlpha;
-			aFInfo.f = trans.mFrame;
-			aFInfo.i = trans.mImage;
-			reanim->mImagesSet->insert(aFInfo.i);
-			aInfo.mFrames.push_back(aFInfo);
-		}
-
-		reanim->mTracks->push_back(aInfo);
-	}
-
-	reanim->mIsLoaded = true;
-	reanim->mResourceManager = this;
-
-	mResLoadMutex.lock();
-	mResourcePool[id] = reanim;
-	mResLoadMutex.unlock();
-}
-
-void sgf::ResourceManager::LoadCompiledReanimWithID(const sgf::String& aPath, sgf::String id)
-{
-	
-	PopCom::Data data = PopCom::UncompressCompiledFromFile(aPath.c_str());
-	PopCom::ReanimDefinition def = PopCom::DecodeReanim(data.mData, data.mHeader.mUncompressedSize);
-	LoadReanimByDefinitionWithID(def,id);
-}
-
 void sgf::ResourceManager::LoadFontWithID(const sgf::String& aPath, sgf::String id)
 {
 	Font* font = new Font();
@@ -188,9 +142,6 @@ static void LoadFromResouceListFunc(sgf::ResourceManager* tar,sgf::ResourceList*
 		else if (x.folder == "raxml" || x.folder == "praxml") {
 			tar->LoadReanimWithID((tar->mBasePath + x.path), x.id);
 		}
-		else if (x.folder == "reanim_compiled") {
-			tar->LoadCompiledReanimWithID((tar->mBasePath + x.path), x.id);
-		}
 
 		if (x.folder == "font") {
 			tar->LoadFontWithID((tar->mBasePath + x.path), x.id);
@@ -252,7 +203,7 @@ void sgf::ResourceManager::LoadFromResouceList(ResourceList* src,MusicManager* m
 
 void sgf::ResourceList::Load(const char* path)
 {
-	mPath = sgf::String(path);
+	mPath = _SS(path);
 	pugi::xml_parse_result err;
 	pugi::xml_document doc = FileManager::TryToLoadXMLFile(path,&err);
 
@@ -265,7 +216,7 @@ void sgf::ResourceList::Load(const char* path)
 	for (auto& x : *doc.children().begin()) {
 		for (auto& y : x.children()) {
 			ResouceInfo aInf;
-			sgf::String fPath = x.name() + sgf::String("/") + y.attribute("path").as_string();
+			sgf::String fPath = x.name() + _SS("/") + y.attribute("path").as_string();
 			aInf.path = fPath;
 			aInf.id = y.attribute("id").as_string();
 			aInf.folder = x.attribute("folder").as_string();

@@ -7,7 +7,7 @@
 #include <unordered_map>
 #include "Common.h"
 #include "MusicSystem.h"
-#include "PopCom/CompiledReader.h"
+//#include "PopCom/CompiledReader.h"
 
 
 namespace sgf{
@@ -49,11 +49,6 @@ namespace sgf{
 		void LoadImageAtlas(const sgf::String& aPath, const sgf::String& folder, sgf::String id_info);
 
 		void LoadReanimWithID(const sgf::String& aPath, sgf::String id);
-
-		void LoadReanimByDefinitionWithID(const PopCom::ReanimDefinition& def, sgf::String id);
-
-		void LoadCompiledReanimWithID(const sgf::String& aPath, sgf::String id);
-
 
 		void LoadFontWithID(const sgf::String& aPath, sgf::String id);
 		void LoadParticleWithID(const sgf::String& aPath, sgf::String id);

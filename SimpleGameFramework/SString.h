@@ -52,4 +52,6 @@ namespace sgf {
     }
 }
 
+#define _SS(x) sgf::String(x)
+
 #endif // !__SGF_STRING_H__
