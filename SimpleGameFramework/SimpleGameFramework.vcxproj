@@ -176,7 +176,6 @@
     <ClCompile Include="Reanimation.cpp" />
     <ClCompile Include="GameMessage.cpp" />
     <ClCompile Include="GameApp.cpp" />
-    <ClCompile Include="SimpleUI\SimpleUI.cpp" />
     <ClCompile Include="SString.cpp" />
     <ClCompile Include="WidgetSystem.cpp" />
     <ClCompile Include="Program.cpp" />
