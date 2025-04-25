@@ -15,19 +15,6 @@ namespace sgf {
 		static void InformationInit();
 	};
 
-	class VertexArrayObject {
-	public:
-		unsigned int mSimpleVAO = 0;
-		unsigned int mSimpleVBO = 0;
-		void* mVertex = nullptr;
-	public:
-		VertexArrayObject();
-		~VertexArrayObject();
-
-		void Bind();
-		void Init(Vertex* target,int count);
-	};
-
 	class SimpleProgram {
 	public:
 		enum ShaderType {

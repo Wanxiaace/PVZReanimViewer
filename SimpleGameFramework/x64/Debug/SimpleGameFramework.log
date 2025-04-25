@@ -1,0 +1,5 @@
+﻿H:\VisualStudio\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+  Installing vcpkg dependencies to F:\VSProjects\PVZCapture\vcpkg_installed\x64-windows\
+  "H:\vcpkg\vcpkg\vcpkg.exe" install  --x-wait-for-lock --triplet "x64-windows" --vcpkg-root "H:\vcpkg\vcpkg\\" "--x-manifest-root=F:\VSProjects\PVZCapture\\" "--x-install-root=F:\VSProjects\PVZCapture\vcpkg_installed\x64-windows\\" 
+  正在检测三元组 x64-windows 的编译器哈希...
+H:\vcpkg\vcpkg\scripts\buildsystems\msbuild\vcpkg.targets(183,5): warning MSB5021: 终止任务可执行文件“cmd”及其子进程，因为已取消生成。

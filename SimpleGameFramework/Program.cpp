@@ -81,28 +81,6 @@ void sgf::SimpleProgram::Use()
 	glUseProgram(mProgram);
 }
 
-sgf::VertexArrayObject::VertexArrayObject()
-{
-	glGenVertexArrays(1,&mSimpleVAO);
-	Bind();
-}
-
-sgf::VertexArrayObject::~VertexArrayObject()
-{
-
-}
-
-void sgf::VertexArrayObject::Bind()
-{
-	glBindBuffer(GL_VERTEX_ARRAY, mSimpleVAO);
-}
-
-void sgf::VertexArrayObject::Init(Vertex* target, int count)
-{
-	glGenBuffers(1,&mSimpleVBO);
-	glBindBuffer(GL_ARRAY_BUFFER, mSimpleVBO);
-	Vertex::InformationInit();
-}
 
 void sgf::Vertex::InformationInit()
 {
