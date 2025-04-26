@@ -49,7 +49,7 @@ void sgf::WidgetManager::Update(GameAppBase* app)
 	size_t length = mWidgets.size();
 	bool isMouseUsed = false;
 	bool isModelUsed = false;
-	for (auto x = mWidgets.rbegin();x < mWidgets.rend();x++)
+	for (auto x = mWidgets.rbegin();x != mWidgets.rend();x++)
 	{
 		if ((*x)->GetVisible()) {
 			(*x)->mTick.Update();
